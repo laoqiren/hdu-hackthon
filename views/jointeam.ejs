@@ -1,0 +1,113 @@
+<%- include htmlHeader %>
+	
+ 	<!-- 头部开始 -->
+<%- include header %>
+
+<div style="color:white;padding:5% 0%" id="form" >
+    <h3 style="text-align:center">团队报名<span style="font-size:14px">(*标记为必填项)</span></h3>
+    <br/>
+    <form class="form-horizontal" role="form" name="join" >
+        <div class="form-group">
+            <label for="teamname" class="col-sm-2 control-label"><span class="glyphicon glyphicon-asterisk" style="color:red"></span>团队名称</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="teamname" id="teamname" placeholder="请输入团队名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="school" class="col-sm-2 control-label">学校</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="school" name="school" placeholder="请输入学校">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="college" class="col-sm-2 control-label">学院</label>
+            <div class="col-sm-2">
+            <input type="text" class="form-control" name="college" id="college" placeholder="请输入学院">
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <label for="tel" class="col-sm-2 control-label">联系方式</label>
+            <div class="col-sm-2">
+            <input type="text" class="form-control" name="tel" id="tel" placeholder="请输入电话">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="grade" class="col-sm-2 control-label">年级</label>
+            <div class="col-sm-2">
+            <input type="text" class="form-control" name="grade" id="grade" placeholder="请输入年级">
+            </div>
+            
+        </div>
+        <h4 style="text-align:center">小组成员</h4>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2"><span class="glyphicon glyphicon-asterisk" style="color:red"></span>姓名</div>
+            <div class="col-md-2">性别</div>
+            <div class="col-md-2">联系方式</div>
+        </div>
+        <div class="form-group">
+            <label for="college" class="col-sm-2 control-label"><span class="glyphicon glyphicon-asterisk" style="color:red"></span>成员1</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="college" name="name1" placeholder="请输入姓名">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="sex1" placeholder="请输入性别">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="tel1" placeholder="请输入电话">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="college" class="col-sm-2 control-label"><span class="glyphicon glyphicon-asterisk" style="color:red"></span>成员2</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="college" name="name2" placeholder="请输入姓名">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="sex2" placeholder="请输入性别">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="tel2" placeholder="请输入电话">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="college" class="col-sm-2 control-label">成员3</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="name3" placeholder="请输入姓名">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="sex3" placeholder="请输入性别">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="tel3" placeholder="请输入电话">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="college" class="col-sm-2 control-label">成员4</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="college" name="name4" placeholder="请输入姓名">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="sex4" placeholder="请输入性别">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control"  name="tel4" placeholder="请输入电话">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="auth" class="col-sm-2 control-label">验证码</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="auth" name="answer" placeholder="验证码">
+            </div>
+            <button class="btn" id="getImage">获取验证码</button>
+            <span style="display:none" id="authImage"></span>
+            <span style="display:none" id="imageError">验证码错误</span>
+            <div class="col-sm-offset-2">
+                <button type="submit" class="btn btn-default" id="submit">报名</button>
+                <span style="display:none" id="getit">报名成功!</span>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="//cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script src="javascripts/form1.js"></script>
+<%- include footer %>

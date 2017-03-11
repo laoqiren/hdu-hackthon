@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>登录管理系统</title>
+    <script>
+        $(document).ready(function(){
+            $('#login').on('click',function(){
+                $.ajax({
+                    method:'POST',
+                    url: '/api/auth',
+                    data: JSON.stringify({
+                        passwd:$('#passwd').val()
+                        }),
+                    contentType: 'application/json',
+                    success: function(){
+                        location.href = '/admin'
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div class="panel panel-default">
+            <div class="panel-heading">登录管理系统</div>
+            <div class="panel-body">登录密码<input id="passwd" class="form-control" type="password"/><button id="login" class="btn primary">登录</button>
+            </div>
+            <div class="panel-footer">Powered By Hello World FE team</div>
+        </div>
+        
+    </div>
+</body>
+</html>
