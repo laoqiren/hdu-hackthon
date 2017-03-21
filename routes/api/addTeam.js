@@ -5,6 +5,7 @@ module.exports = function(req,res,next){
         menbers = req.body.menbers;
     const TeamEntity = new Team();
     if(req.body.answer !== req.session.answer){
+        req.session.answer = undefined;
         return res.status(401).end();
     }
     menbers = menbers.filter((menber,i)=>menber.name !== '')

@@ -22,6 +22,7 @@ router.post('/addTeam',addTeam);
 
 router.post('/addMenber',(req,res,next)=>{
     if(req.body.answer !== req.session.answer){
+        req.session.answer = undefined;
         return res.status(401).end();
     }
     const info = {
